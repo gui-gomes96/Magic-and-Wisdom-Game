@@ -15,7 +15,7 @@ func _on_mago_de_agua_pressed() -> void:
 
 
 func _on_mago_da_natureza_pressed() -> void:
-		selecionar_personagem( "mago_da_Natureza", preload("res://assets/mago_de_fogo.png"))
+		selecionar_personagem( "mago_da_Natureza", preload("res://assets/mago_da_floresta.png"))
 
 func selecionar_personagem(nome: String, sprite: Texture2D):
 	Global.personagem_selecionado  = {
