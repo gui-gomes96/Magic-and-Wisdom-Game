@@ -1,0 +1,48 @@
+[gd_scene load_steps=2 format=3 uid="uid://ddqd0c55x1xev"]
+
+[ext_resource type="Script" uid="uid://bsswljsflnaqe" path="res://scripts/Combate Solo/Combate.gd" id="1_n1g0u"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_n1g0u")
+
+[node name="Pergunta" type="Label" parent="."]
+layout_mode = 0
+offset_left = 477.0
+offset_top = 9.0
+offset_right = 682.0
+offset_bottom = 48.0
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 398.0
+offset_top = 134.0
+offset_right = 748.0
+offset_bottom = 247.0
+
+[node name="Jogador" type="Sprite2D" parent="."]
+position = Vector2(119, 533)
+
+[node name="Bot" type="Sprite2D" parent="."]
+position = Vector2(1039, 535)
+
+[node name="VidaBot" type="ProgressBar" parent="."]
+offset_left = 83.0
+offset_top = 206.0
+offset_right = 252.0
+offset_bottom = 233.0
+value = 20.0
+show_percentage = false
+
+[node name="VidaJogador" type="ProgressBar" parent="."]
+offset_left = 900.0
+offset_top = 204.0
+offset_right = 1069.0
+offset_bottom = 231.0
+value = 20.0
+show_percentage = false
