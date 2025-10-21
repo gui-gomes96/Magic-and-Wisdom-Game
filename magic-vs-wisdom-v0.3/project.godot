@@ -1,0 +1,34 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=5
+
+[application]
+
+config/name="Magic Vs Wisdom v0.2"
+run/main_scene="uid://dhpik5u0aumcd"
+config/features=PackedStringArray("4.4", "Mobile")
+config/icon="res://assets/icon.svg"
+
+[autoload]
+
+Global="*res://scripts/Global.gd"
+
+[display]
+
+window/size/mode=3
+window/size/initial_position_type=0
+window/stretch/mode="viewport"
+window/stretch/aspect="expand"
+window/canvas_textures/default_texture_repeat=0
+window/canvas_textures/default_texture_filter=1
+
+[rendering]
+
+textures/canvas_textures/default_texture_filter=0
+renderer/rendering_method="mobile"
