@@ -1,0 +1,129 @@
+[gd_scene load_steps=2 format=3 uid="uid://ddqd0c55x1xev"]
+
+[ext_resource type="Script" uid="uid://bsswljsflnaqe" path="res://scripts/Combate Solo/Combate.gd" id="1_yv4v4"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_yv4v4")
+
+[node name="Bot" type="Sprite2D" parent="."]
+position = Vector2(1039, 535)
+
+[node name="Jogador" type="Sprite2D" parent="."]
+position = Vector2(245, 539)
+scale = Vector2(-1, 1)
+
+[node name="PerguntaContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -22.0
+offset_right = 20.0
+offset_bottom = 22.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="BotaoA" type="Button" parent="PerguntaContainer"]
+layout_mode = 2
+
+[node name="BotaoB" type="Button" parent="PerguntaContainer"]
+layout_mode = 2
+
+[node name="BotaoC" type="Button" parent="PerguntaContainer"]
+layout_mode = 2
+
+[node name="BotaoD" type="Button" parent="PerguntaContainer"]
+layout_mode = 2
+
+[node name="StatusPlayer" type="Label" parent="."]
+layout_mode = 0
+offset_left = 224.0
+offset_top = 88.0
+offset_right = 439.0
+offset_bottom = 168.0
+text = "Test"
+
+[node name="Turno" type="Label" parent="."]
+layout_mode = 0
+offset_left = 552.0
+offset_top = 472.0
+offset_right = 592.0
+offset_bottom = 495.0
+
+[node name="Resultado" type="Label" parent="."]
+layout_mode = 0
+offset_left = 560.0
+offset_top = 128.0
+offset_right = 600.0
+offset_bottom = 151.0
+
+[node name="StatusBot" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -360.0
+offset_top = -236.0
+offset_right = -210.0
+offset_bottom = -167.0
+grow_horizontal = 0
+grow_vertical = 2
+text = "Test"
+
+[node name="Pergunta" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -102.5
+offset_right = 102.5
+offset_bottom = 39.0
+grow_horizontal = 2
+
+[node name="AcoesContainer" type="VBoxContainer" parent="."]
+layout_mode = 0
+offset_left = 184.0
+offset_top = 264.0
+offset_right = 406.0
+offset_bottom = 435.0
+
+[node name="Pular_Turno" type="Button" parent="AcoesContainer"]
+layout_mode = 2
+text = "PULAR TURNO"
+
+[node name="Ataque_Fraco" type="Button" parent="AcoesContainer"]
+layout_mode = 2
+text = "ATAQUE FRACO -1(ENERGIA"
+
+[node name="Ataque_Medio" type="Button" parent="AcoesContainer"]
+layout_mode = 2
+text = "ATAQUE MÉDIO -2(ENERGAI"
+
+[node name="Ataque_Forte" type="Button" parent="AcoesContainer"]
+layout_mode = 2
+text = "ATAQUE FORTE -5(ENERGIA)"
+
+[node name="Cura" type="Button" parent="AcoesContainer"]
+layout_mode = 2
+text = "CURA"
+
+[node name="Voltar" type="Button" parent="."]
+layout_mode = 0
+offset_left = 2.0
+offset_top = 4.0
+offset_right = 88.0
+offset_bottom = 54.0
+text = "Voltar"
+
+[connection signal="pressed" from="Voltar" to="." method="_on_voltar_pressed"]
