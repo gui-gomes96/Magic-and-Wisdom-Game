@@ -1,0 +1,75 @@
+[gd_scene load_steps=4 format=3 uid="uid://dhpik5u0aumcd"]
+
+[ext_resource type="Script" uid="uid://cjqdd1j7gdd03" path="res://scripts/Menu Scripts/Menu.gd" id="1_r4ogh"]
+[ext_resource type="Script" uid="uid://eao0n0bq6xcr" path="res://scenes/Menu Scenes/Botoes.gd" id="2_fogbv"]
+[ext_resource type="Texture2D" uid="uid://ckx21qd7v4ph0" path="res://assets/Menu/Logo.png" id="2_usnml"]
+
+[node name="Menu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -1.0
+offset_bottom = -1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+script = ExtResource("1_r4ogh")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+z_index = 100
+y_sort_enabled = true
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -186.0
+offset_top = -52.5
+offset_right = 186.0
+offset_bottom = 52.5
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="btn_jogar" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "JOGAR"
+script = ExtResource("2_fogbv")
+
+[node name="Opções" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "OPÇÕES"
+script = ExtResource("2_fogbv")
+
+[node name="Creditos" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "CREDITOS"
+script = ExtResource("2_fogbv")
+
+[node name="Como Jogar" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "COMO JOGAR?"
+script = ExtResource("2_fogbv")
+
+[node name="Versão" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -23.0
+offset_right = 80.0
+grow_vertical = 0
+text = "Versão 0.1"
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(582, 118)
+scale = Vector2(0.528, 0.372)
+texture = ExtResource("2_usnml")
+
+[connection signal="pressed" from="VBoxContainer/btn_jogar" to="." method="_on_btn_jogar_pressed"]
+[connection signal="pressed" from="VBoxContainer/Opções" to="." method="_on_opções_pressed"]
+[connection signal="pressed" from="VBoxContainer/Creditos" to="." method="_on_creditos_pressed"]
+[connection signal="pressed" from="VBoxContainer/Como Jogar" to="." method="_on_como_jogar_pressed"]

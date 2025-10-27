@@ -1,0 +1,73 @@
+[gd_scene load_steps=3 format=3 uid="uid://el70oogbrsr3"]
+
+[ext_resource type="Script" uid="uid://k10288f8e10h" path="res://scripts/Menu Scripts/Escolha de Modo de Jogo.gd" id="1_adneb"]
+[ext_resource type="Script" uid="uid://eao0n0bq6xcr" path="res://scenes/Menu Scenes/Botoes.gd" id="2_elp6u"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_adneb")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+z_index = 100
+y_sort_enabled = true
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -186.0
+offset_top = -52.5
+offset_right = 186.0
+offset_bottom = 52.5
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="solo" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "SOLO"
+script = ExtResource("2_elp6u")
+
+[node name="DUAS PESSOAS" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "DUAS PESSOAS"
+script = ExtResource("2_elp6u")
+
+[node name="ARCADE SOLO" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "ARCADE SOLO"
+script = ExtResource("2_elp6u")
+
+[node name="Quiz" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "QUIZ"
+script = ExtResource("2_elp6u")
+
+[node name="Versão" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -23.0
+offset_right = 80.0
+grow_vertical = 0
+text = "Versão 0.1"
+
+[node name="Voltar" type="Button" parent="."]
+layout_mode = 0
+offset_left = 2.0
+offset_top = 4.0
+offset_right = 88.0
+offset_bottom = 54.0
+text = "Voltar"
+script = ExtResource("2_elp6u")
+
+[connection signal="pressed" from="VBoxContainer/solo" to="." method="_on_solo_pressed"]
+[connection signal="pressed" from="VBoxContainer/Quiz" to="." method="_on_quiz_pressed"]
+[connection signal="pressed" from="Voltar" to="." method="_on_button_pressed"]
